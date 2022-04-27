@@ -1,0 +1,10 @@
+provider "aws" {
+  region = "us-east-1"
+  access_key = "AKIAU6URLWG53QDJDTUA"
+  secret_key = "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"
+}
+resource "aws_s3_object" "object" {
+  bucket = "my-ahmedtf-test-bucket"
+  key    = "new_object_key"
+  source = "my-ahmedtf-test-bucket"
+}
